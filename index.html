@@ -7,33 +7,45 @@
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-<form name="formulario" action="ejecutar-código.php" method="post" id="miFormulario">  
+<form name="formulario" action="ejecutar-codigo.php" method="post" id="miFormulario">  
       <!-- method esta el post y el get ,sirve para emviar información al servidor,la diferencia entre ellos es que el post sale la url y el get los datos visibles y tiene poca seguridad -->
   <div>
-
-
-                                                                                          
-    <label for="mitexto">Usuario</label>                     
-    <input type="text" id="mitexto" placeholder="Escribe aqui tu nombre" title="Escribe solo en minúsculas y no más de 15 carácteres" pattern="[a-z]{1,15}">                                                 
+                                                                                       
+     <label for="mitexto">Usuario</label>  
+     <!--label siempre va acompañado de "for" se usa como si fuese un "id" y le pones un nombre en este caso"mitexto" suele ser igual que la id en imput para vincular ambos-->                  
+    <input type="text" id="mitexto" placeholder="Escribe aqui tu nombre" title="Escribe solo en minúsculas y no más de 15 carácteres" pattern="[a-z]{1,15}">  
+    <!-- siempre que ponemos input lleva el "type, placehorder se usa para poner el texto clarito antes de rellenar el formulario, el title se usa como mensaje cuando no cumples con los requisitos , pattern son los requisitos las letras siempre se pone [] y los numeros{} "-->                                               
 </div> 
 <div>
     <label for="telefono">Teléfono</label>
-    <input type="number" id="telefono" placeholder="Escribe tu Tf" min="2" max="30">
+    <input type="number" id="telefono" placeholder="Escribe tu Tf" min="2" max="30" maxlength="9">
+    <!--min y max son los requisitos en este caso tienes que meter entre 2 y el 30 de número el maxlength sirve para poner no más de 9 caracteres-->
 </div> 
 
 <div class="Login">
     <h3>Login</h3>
 
     <input type="text" placeholder="Escribe tu nombre" name="nombre" minlength="5" maxlength="40" required>
+    <!--minlegth para un minimos de requisitos y maxlenght el maximos de caracteres y el "requieres" que es obligatorio rellenar el formulario esa parte-->
     <!--login-->
     <input type="password" name="pass" placeholder="contraseña" minlength="11" required> 
-    <!--contraseña-->                                                    <!-- required hace que sea obligatorio -->
-    
+    <!--en name no se puede poner contraseña porque lleva la "ñ" pero en una id si se puede poner y en clase también yen el placeholder-->                                                   
+     <!-- required hace que sea obligatorio -->
+
+</div>  
+<div>  
+
+     <input type="text" placeholder="su modelo de coche" title="modelos posibles: A1, A3, A4 Y A5" pattern="A|a(1|3|4|5)">
 
 </div>
-
+<div>
+    <label for="correo">EMAIL</label> 
+    <input type="email"id=correo" placeholder="Escribe tu email" required>
+    <!--al escribir type"email" no hace falta poner "pattern para el @ sea un requisito-->
+</div>
 
     <input type="submit" value="Enviar">
+<!--"submit" te hace el botón y "value" se usa parael nombre del botón en este caso "enviar"-->
 
 </form>
 
