@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<form name="formulario" action="ejecutar-código.php" method="post" id="miFormulario">  
+      <!-- method esta el post y el get ,sirve para emviar información al servidor,la diferencia entre ellos es que el post sale la url y el get los datos visibles y tiene poca seguridad -->
+  <div>
+
+
+                                                                                          
+    <label for="mitexto">Usuario</label>                     
+    <input type="text" id="mitexto" placeholder="Escribe aqui tu nombre" title="Escribe solo en minúsculas y no más de 15 carácteres" pattern="[a-z]{1,15}">                                                 
+</div> 
+<div>
+    <label for="telefono">Teléfono</label>
+    <input type="number" id="telefono" placeholder="Escribe tu Tf" min="2" max="30">
+</div> 
+
+<div class="Login">
+    <h3>Login</h3>
+
+    <input type="text" placeholder="Escribe tu nombre" name="nombre" minlength="5" maxlength="40" required>
+    <!--login-->
+    <input type="password" name="pass" placeholder="contraseña" minlength="11" required> 
+    <!--contraseña-->                                                    <!-- required hace que sea obligatorio -->
+    
+
+</div>
+
+
+    <input type="submit" value="Enviar">
+
+</form>
+
+
+
+</body>
+</html>

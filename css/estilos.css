@@ -1,0 +1,25 @@
+form{
+    width: 25%;
+    padding: 3%;
+    border-radius: 10px;
+    margin: auto;
+    background-color: rgb(179, 238, 238);
+}
+
+div{
+    display:flex;
+    flex-direction: column;
+    margin:0 10%;
+}
+label{
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+input{
+    margin-bottom: 12px;
+}
+.Login{
+    border:1px solid black;
+    padding: 15px 5px;
+    background-color: rgb(116, 201, 151);
+}
