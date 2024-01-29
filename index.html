@@ -43,9 +43,104 @@
     <input type="email"id=correo" placeholder="Escribe tu email" required>
     <!--al escribir type"email" no hace falta poner "pattern para el @ sea un requisito-->
 </div>
+<div>
+    <fieldset> <!--te pinta el cuadro del formulario-->
+            <legend>Indica tu grupo de EDAD</legend> <!--es el titulo del cuadro del formulario-->
+            <label for="primero">Menor de 18</label>
+            <input type="radio" id="primero" name="edades"><br> <!-- si le pones radio te pinta el boton de selecionar-->
+            <label for="segundo">18-65</label>
+            <input type="radio" id="segundo" name="edades" checked><br> <!-- le ponemos "name" a los 3 y ya nos deja selecionar solo una opción, el "checked lo ponemos para que salga por defecto esa opción selecionada"-->
+            <label for="tercero">mayor de 65</label>
+            <input type="radio" id="tercero" name="edades"><br>
+    </fieldset>
 
-    <input type="submit" value="Enviar">
-<!--"submit" te hace el botón y "value" se usa parael nombre del botón en este caso "enviar"-->
+</div>
+
+<div>
+
+<fieldset>
+    <legend>Seleciona los ingrediente</legend>
+    <label for="uno">Lechuga</label> <!-- Em este caso le ponemos un diferente fot al de arriba ya que si ponemos tambien "primero" entonces también vincularía los de arriba-->
+    <input type="checkbox" id="uno" name="ingredientes" checked><br> <!-- En este caso con el "checkbox" te permite selecionar más de una seleción, se suele usar mucho para la eleción de ingredientes-->
+    <label for="dos">Tomate</label>
+    <input type="checkbox" id="dos" name="ingredientes"><br>
+    <label for="tres">Cebolla</label>
+    <input type="checkbox" id="tres" name="ingredientes"><br>
+</
+
+
+
+
+
+</div>
+  <div>
+    <label for="miarea">observaciones</label>
+    <textarea name="mensaje" id="miarea" cols="30" rows="10"maxlenght="200" placeholder="máximo 200 caracteres"></textarea> <!-- el textarea se usa para hacer una caja de texto para escribiir algun comentario, o tu opinión o una observación-->
+  <!-- el cols y el rows se usa como si fuese un width y height, en teoria se usa para el tamaño de la caja de texto"-->
+</div>
+
+<div>
+
+  <fieldset>
+    <legend>Opciones</legend>
+    <label for="misopciones">selecionar</label>
+    <br>
+        <select name="opciones" id="misopciones"> <!--se usa para formulario de selecionar opciones y dentro del "select" mentemos las opciones-->
+
+         <option value="opcion1">opcion1</option>  <!-- En este caso el "value" se usa para recopilar la infomración a la base de datos no tiene nada que ver con la opción de value="enviar" es diferente-->
+         <option value="opcion2">opcion2</option>  <!-- se recomienda que en el value="lo mismo que en el titulo de option de cada uno para que luego en la base de datos lo tenemos mas claro para buscarlo"--> 
+         <option value="opcion3">opcion3</option>  
+
+        </select>
+       
+        <br>
+        <label for="misopciones">selecionar multiple</label>
+        <br>
+        <select multiple name="opciones" id="misopciones"> <!-- en este caso ser pone "multiple para elegir mas de una opción, en este caso es igual que el de arriba solo que le hemos añadido multiple para ver la diferencia"-->
+
+         <option value="opcion1">opcion1</option>  
+         <option value="opcion2">opcion2</option> 
+         <option value="opcion3">opcion3</option>
+
+</select>
+        </fieldset>
+</div>
+
+
+<div>
+    <fieldset>
+        <legend>Opciones de números y letras</legend>
+        <label for="misopcionesdos">Elige tu categoría</label>
+        <select name="numerosyletras" id="misopcionesdos">
+        <optgroup label="Numeros">               <!-- se usa para poner categorias, ponemos en este caso el "label dentro y el nombre que queremos que salga en la categoría" -->
+            <option value="opcion1">opcion 1</option>
+            <option value="opcion2">opcion 2</option>
+            <option value="opcion3">opcion 3</option>
+        </optgroup> 
+
+        <optgroup label="Letras">
+            <option value="opcionA">opcion A</option>
+            <option value="opcionB">opcion B</option>
+            <option value="opcionC">opcion C</option>
+        </optgroup>
+    </select>
+    </fieldset>
+</div>
+<div>
+    <label for="foto">Subir archivo</label>
+    <input type="file" id="foto" name="subirfoto"> <!-- botón para cargar archivos se usa el type="file"-->
+    
+    <input type="submit" value="Enviar un email" formaction="mailto:oalramon2023@gmail.com">
+      <!-- En este caso es para escribir un mensaje al correo que ponemos se suele usar para contactar con el soporte o ayuda-->
+    <input type="submit" value="información legal" formaction="https://oalhuetortajar.com/politica-de-privacidad/"formtarget="_blank">
+    <!-- En este caso te lleva a la página que pongas en este caso hemos puesto las politica de privacidad del OAL-->
+
+
+
+
+
+<input type="submit" value="Enviar">
+<!--"submit" te hace el botón y "value" se usa parael nombre del botón en este caso "enviar" y este botón esta relacinado con el de arriba  action="ejecutar-codigo.php"-->
 
 </form>
 
